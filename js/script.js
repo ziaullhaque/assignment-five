@@ -1,20 +1,27 @@
+// heart count
 let count = 0;
-const display = document.getElementById("heart-count");
+let hearts = document.getElementsByClassName("heart-btn");
+for (const heart of hearts) {
+  heart.addEventListener("click", function () {
+    count++;
+    document.getElementById("heart-count").innerText = count;
+  });
+}
 
-document.getElementsByClassName("heart-btn").addEventListener("click", function () {
-  count++;
-  display.textContent = count;
+//copying
+
+let copyCount = 0;
+document.querySelectorAll(".copy").forEach(function (copyButton) {
+  copyButton.addEventListener("click", function () {
+    const targetElement = copyButton
+      .closest(".card")
+      .querySelector(".num-copy");
+    const textToCopy = targetElement.textContent.trim();
+    navigator.clipboard.writeText(textToCopy).then(function () {
+      alert("Number Copied! : " + textToCopy);
+
+      copyCount++;
+      document.getElementById("count-copy").innerText = copyCount;
+    });
+  });
 });
-
-// let count = 0;
-// const button = document.getElementById("heart-btn");
-// const display = document.getElementById("heart-count");
-
-// button.addEventListener("click", () => {
-//   count++;
-//   display.textContent = count;
-// });
-
-// const items = document.querySelectorAll("heart-btn");
-// const itemCountDisplay = document.getElementById("heart-count");
-// itemCountDisplay.textContent = items.length;
