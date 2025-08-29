@@ -47,7 +47,6 @@ function getTime() {
 // call and coin delete
 function callCard(event) {
   if (coins < 20) {
-    // alert("❌ আপনার পর্যাপ্ত কয়েন নেই কল করতে কমপক্ষে 20 কয়েন লাগবে");
     alert(
       "❌ You don't have enough coins. You need at least 20 coins to make a call."
     );
