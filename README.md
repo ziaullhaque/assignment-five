@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ০১.getElementById, getElementsByClassName, এবং querySelector , querySelectorAll এর মধ্যে পার্থক্য কী?
 
 উত্তর : 
@@ -28,6 +27,6 @@
 উত্তর :  preventDefault() → Element এর default behavior বন্ধ করে।
 উত্তর :  stopPropagation() → Event bubbling বা capturing বন্ধ করে।
 
-=======
->>>>>>> 30a363a1c58490ec9d707bbdf024f6de474926d2
+
+
 
